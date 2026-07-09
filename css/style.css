@@ -1,0 +1,157 @@
+/* Global Styles */
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #212529;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f9fa;
+  min-height: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-outline-warning {
+  border-width: 2px;
+}
+
+/* Hero Sections */
+.hero-section,
+.menu-hero,
+.about-hero,
+.reservation-hero,
+.contact-hero {
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-section::before,
+.menu-hero::before,
+.about-hero::before,
+.reservation-hero::before,
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-section .container,
+.menu-hero .container,
+.about-hero .container,
+.reservation-hero .container,
+.contact-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1,
+.menu-hero h1,
+.about-hero h1,
+.reservation-hero h1,
+.contact-hero h1 {
+  color: #fff;
+}
+
+.hero-section {
+  background-color: #7a7a7a;
+}
+
+.hero-section h1 {
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero-section .lead {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 680px;
+}
+
+.hero-section .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Cards */
+.food-card,
+.menu-card,
+.stat-card,
+.card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.food-card:hover,
+.menu-card:hover,
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.12);
+}
+
+.card .card-img-top {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.order-btn {
+  transition: transform .2s ease;
+}
+
+.order-btn:hover {
+  transform: scale(1.02);
+}
+
+.special-offers {
+  border-radius: 2rem 0 0 2rem;
+}
+
+.map-box {
+  min-height: 240px;
+}
+
+/* Section headers */
+h2 {
+  letter-spacing: -.02em;
+}
+
+/* Responsive Navigation */
+.navbar-nav .nav-link {
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  font-size: .95rem;
+}
+
+/* Form focus */
+.form-control:focus,
+.form-select:focus,
+.btn:focus {
+  box-shadow: 0 0 0 .25rem rgba(255, 193, 7, .25);
+}
+
+/* Smaller devices */
+@media (max-width: 991px) {
+  .hero-section,
+  .menu-hero,
+  .about-hero,
+  .reservation-hero,
+  .contact-hero {
+    min-height: 55vh;
+  }
+}
+
+@media (max-width: 575px) {
+  .special-offers {
+    border-radius: 0;
+  }
+}

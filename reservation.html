@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie Restaurant | Reservation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Foodie Logo" width="40" height="40" class="me-2" />
+        <span class="fw-bold text-dark">Foodie</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="reservation-hero py-5 text-white text-center" style="background-image: url('images/hero-bg.jpg');">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Reserve Your Table</h1>
+      <p class="lead text-light">Secure a seat for your next meal with our simple online booking form.</p>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0 p-4">
+          <div class="card-body">
+            <h2 class="fw-bold mb-4">Book a Table</h2>
+            <div id="reservationAlert" class="alert alert-success d-none" role="alert">
+              Your reservation request has been submitted successfully. We will contact you soon.
+            </div>
+            <form id="reservationForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="resName" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="resName" placeholder="John Doe" required />
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="resEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="resEmail" placeholder="name@example.com" required />
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="resPhone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="resPhone" placeholder="(123) 456-7890" required />
+                  <div class="invalid-feedback">Please enter your phone number.</div>
+                </div>
+                <div class="col-md-3">
+                  <label for="resDate" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="resDate" required />
+                  <div class="invalid-feedback">Please select a reservation date.</div>
+                </div>
+                <div class="col-md-3">
+                  <label for="resTime" class="form-label">Time</label>
+                  <input type="time" class="form-control" id="resTime" required />
+                  <div class="invalid-feedback">Please select a reservation time.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="resGuests" class="form-label">Number of Guests</label>
+                  <select id="resGuests" class="form-select" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5+ People</option>
+                  </select>
+                  <div class="invalid-feedback">Please select the number of guests.</div>
+                </div>
+                <div class="col-12">
+                  <label for="resRequest" class="form-label">Special Request</label>
+                  <textarea class="form-control" id="resRequest" rows="4" placeholder="Let us know if you have dietary preferences or seating requests."></textarea>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-warning btn-lg px-5">Submit Reservation</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; <span id="currentYearReservation"></span> Foodie Restaurant</p>
+      <p class="mb-0">Professional reservation page for portfolio showcase.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

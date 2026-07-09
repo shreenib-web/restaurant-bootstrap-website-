@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie Restaurant | Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Foodie Logo" width="40" height="40" class="me-2" />
+        <span class="fw-bold text-dark">Foodie</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="menu-hero py-5 text-white text-center" style="background-image: url('images/hero-bg.jpg');">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Our Menu</h1>
+      <p class="lead text-light">Browse our handcrafted dishes across pizzas, burgers, pasta, desserts and refreshing drinks.</p>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Menu Categories</h2>
+      <p class="text-muted mx-auto" style="max-width: 640px;">From savory starters to sweet endings, every plate is made to impress.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card menu-card h-100 shadow-sm border-0">
+          <img src="images/Margherita Pizza.jpg" class="card-img-top" alt="Margherita Pizza" />
+          <div class="card-body">
+            <h5 class="card-title">Margherita Pizza</h5>
+            <p class="card-text text-muted">Tomato sauce, mozzarella, basil and a crisp crust for authentic flavor.</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-warning text-dark">Pizza</span>
+              <span class="fw-bold">₹679</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="text-warning">★★★★★</div>
+              <button class="btn btn-outline-warning btn-sm">Add Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card menu-card h-100 shadow-sm border-0">
+          <img src="images/Classic Burger.jpg" class="card-img-top" alt="Classic Burger" />
+          <div class="card-body">
+            <h5 class="card-title">Classic Burger</h5>
+            <p class="card-text text-muted">Beef patty with cheddar, lettuce, tomato, and house sauce.</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-warning text-dark">Burgers</span>
+              <span class="fw-bold">₹549</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="text-warning">★★★★☆</div>
+              <button class="btn btn-outline-warning btn-sm">Add Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card menu-card h-100 shadow-sm border-0">
+          <img src="images/Creamy Alfredo.jpg" class="card-img-top" alt="Creamy Alfredo" />
+          <div class="card-body">
+            <h5 class="card-title">Creamy Alfredo</h5>
+            <p class="card-text text-muted">Fettuccine tossed in creamy parmesan sauce with garlic and herbs.</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-warning text-dark">Pasta</span>
+              <span class="fw-bold">₹629</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="text-warning">★★★★★</div>
+              <button class="btn btn-outline-warning btn-sm">Add Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card menu-card h-100 shadow-sm border-0">
+          <img src="images/Berry Cheesecake.jpg" class="card-img-top" alt="Berry Cheesecake" />
+          <div class="card-body">
+            <h5 class="card-title">Berry Cheesecake</h5>
+            <p class="card-text text-muted">Creamy cheesecake topped with fresh berries and berry coulis.</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-warning text-dark">Desserts</span>
+              <span class="fw-bold">₹399</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="text-warning">★★★★☆</div>
+              <button class="btn btn-outline-warning btn-sm">Add Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card menu-card h-100 shadow-sm border-0">
+          <img src="images/Sparkling Lemonade.jpg" class="card-img-top" alt="Sparkling Lemonade" />
+          <div class="card-body">
+            <h5 class="card-title">Sparkling Lemonade</h5>
+            <p class="card-text text-muted">Refreshing citrus blend with bubbly soda and mint.</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-warning text-dark">Drinks</span>
+              <span class="fw-bold">₹349</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="text-warning">★★★★☆</div>
+              <button class="btn btn-outline-warning btn-sm">Add Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card menu-card h-100 shadow-sm border-0">
+          <img src="images/Chef Special Salad.jpg" class="card-img-top" alt="Chef Special Salad" />
+          <div class="card-body">
+            <h5 class="card-title">Chef Special Salad</h5>
+            <p class="card-text text-muted">Seasonal greens, roasted vegetables, feta, and lemon dressing.</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-warning text-dark">Special</span>
+              <span class="fw-bold">₹459</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="text-warning">★★★★★</div>
+              <button class="btn btn-outline-warning btn-sm">Add Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; <span id="currentYearMenu"></span> Foodie Restaurant</p>
+      <p class="mb-0">Designed for frontend portfolio presentation.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

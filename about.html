@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie Restaurant | About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Foodie Logo" width="40" height="40" class="me-2" />
+        <span class="fw-bold text-dark">Foodie</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="about-hero py-5 text-white text-center" style="background-image: url('images/Restaurant interior.jpg');">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Our Story</h1>
+      <p class="lead text-light">A restaurant experience built around exceptional food, thoughtful service, and elegant atmosphere.</p>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <img src="images/chef.jpg" alt="Chef" class="rounded-4 shadow-lg w-100" />
+        <img src="images/Restaurant interior.jpg" alt="Restaurant interior" class="rounded-4 shadow-lg w-100 mt-4" />
+      </div>
+      <div class="col-lg-6">
+        <span class="badge bg-warning text-dark rounded-pill mb-3">Who We Are</span>
+        <h2 class="fw-bold">Chef-led dining with a modern touch</h2>
+        <p class="text-muted">Foodie was founded to celebrate bold flavors and inviting hospitality. Each dish is designed to feel luxurious yet approachable for all guests.</p>
+        <p class="mb-0">Our kitchen team uses locally sourced ingredients and creative recipes to bring every plate to life.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="mb-3 text-warning"><i class="bi bi-egg-fried fs-2"></i></div>
+            <h5 class="fw-bold">Our Mission</h5>
+            <p class="text-muted">Deliver exceptional dining experiences through quality ingredients, thoughtful design, and genuine hospitality.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="mb-3 text-warning"><i class="bi bi-eye fs-2"></i></div>
+            <h5 class="fw-bold">Our Vision</h5>
+            <p class="text-muted">Inspire guests with memorable meals that combine tradition, innovation, and consistent excellence.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 h-100">
+            <div class="mb-3 text-warning"><i class="bi bi-people fs-2"></i></div>
+            <h5 class="fw-bold">Our Promise</h5>
+            <p class="text-muted">Create a warm and welcoming environment where every visit is a celebration of great food and service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Achievements</h2>
+      <p class="text-muted mx-auto" style="max-width: 620px;">Established quality and trust built through years of culinary excellence.</p>
+    </div>
+    <div class="row text-center g-4">
+      <div class="col-sm-4">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100">
+          <h3 class="display-6 fw-bold">10+</h3>
+          <p class="mb-0 text-muted">Years Experience</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100">
+          <h3 class="display-6 fw-bold">5000+</h3>
+          <p class="mb-0 text-muted">Happy Customers</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100">
+          <h3 class="display-6 fw-bold">50+</h3>
+          <p class="mb-0 text-muted">Food Items</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; <span id="currentYearAbout"></span> Foodie Restaurant</p>
+      <p class="mb-0">A stylish restaurant portfolio page for frontend developers.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
