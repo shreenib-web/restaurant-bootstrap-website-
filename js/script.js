@@ -42,12 +42,11 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 skillBars.forEach(bar => skillObserver.observe(bar));
 
-// Reservation form validation and success alert
+// Reservation form validation and submit
 const reservationForm = document.getElementById('reservationForm');
 const reservationAlert = document.getElementById('reservationAlert');
 if (reservationForm) {
   reservationForm.addEventListener('submit', event => {
-    event.preventDefault();
     const inputs = reservationForm.querySelectorAll('input, select');
     let valid = true;
 
@@ -60,10 +59,8 @@ if (reservationForm) {
       }
     });
 
-    if (valid) {
-      reservationAlert.classList.remove('d-none');
-      reservationForm.reset();
-      setTimeout(() => reservationAlert.classList.add('d-none'), 5000);
+    if (!valid) {
+      event.preventDefault();
     }
   });
 }
@@ -72,7 +69,6 @@ if (reservationForm) {
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', event => {
-    event.preventDefault();
     const inputs = contactForm.querySelectorAll('input, textarea');
     let valid = true;
 
@@ -85,17 +81,17 @@ if (contactForm) {
       }
     });
 
-    if (valid) {
-      const button = contactForm.querySelector('button[type="submit"]');
-      button.textContent = 'Message Sent';
-      button.disabled = true;
-      setTimeout(() => {
-        button.textContent = 'Submit Message';
-        button.disabled = false;
-      }, 4000);
-      contactForm.reset();
+    if (!valid) {
+      event.preventDefault();
     }
   });
+}
+
+// Show success message after form submission redirect
+const successMessage = document.getElementById('formSuccessMessage');
+const urlParams = new URLSearchParams(window.location.search);
+if (successMessage && urlParams.get('success') === '1') {
+  successMessage.classList.remove('d-none');
 }
 
 // Food card interactions

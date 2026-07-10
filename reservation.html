@@ -59,39 +59,44 @@
         <div class="card shadow-sm border-0 p-4">
           <div class="card-body">
             <h2 class="fw-bold mb-4">Book a Table</h2>
+            <div id="formSuccessMessage" class="alert alert-success d-none" role="alert">
+              Thank you for order
+            </div>
             <div id="reservationAlert" class="alert alert-success d-none" role="alert">
               Your reservation request has been submitted successfully. We will contact you soon.
             </div>
-            <form id="reservationForm" novalidate>
+            <form id="reservationForm" action="process-form.php" method="post" novalidate>
+              <input type="hidden" name="form_type" value="reservation" />
+              <input type="hidden" name="redirect_to" value="reservation.html" />
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="resName" class="form-label">Full Name</label>
-                  <input type="text" class="form-control" id="resName" placeholder="John Doe" required />
+                  <input type="text" class="form-control" id="resName" name="name" placeholder="John Doe" required />
                   <div class="invalid-feedback">Please enter your full name.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="resEmail" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="resEmail" placeholder="name@example.com" required />
+                  <input type="email" class="form-control" id="resEmail" name="email" placeholder="name@example.com" required />
                   <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="resPhone" class="form-label">Phone Number</label>
-                  <input type="tel" class="form-control" id="resPhone" placeholder="(123) 456-7890" required />
+                  <input type="tel" class="form-control" id="resPhone" name="phone" placeholder="(123) 456-7890" required />
                   <div class="invalid-feedback">Please enter your phone number.</div>
                 </div>
                 <div class="col-md-3">
                   <label for="resDate" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="resDate" required />
+                  <input type="date" class="form-control" id="resDate" name="date" required />
                   <div class="invalid-feedback">Please select a reservation date.</div>
                 </div>
                 <div class="col-md-3">
                   <label for="resTime" class="form-label">Time</label>
-                  <input type="time" class="form-control" id="resTime" required />
+                  <input type="time" class="form-control" id="resTime" name="time" required />
                   <div class="invalid-feedback">Please select a reservation time.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="resGuests" class="form-label">Number of Guests</label>
-                  <select id="resGuests" class="form-select" required>
+                  <select id="resGuests" class="form-select" name="guests" required>
                     <option value="" selected>Choose...</option>
                     <option value="1">1 Person</option>
                     <option value="2">2 People</option>
@@ -103,7 +108,7 @@
                 </div>
                 <div class="col-12">
                   <label for="resRequest" class="form-label">Special Request</label>
-                  <textarea class="form-control" id="resRequest" rows="4" placeholder="Let us know if you have dietary preferences or seating requests."></textarea>
+                  <textarea class="form-control" id="resRequest" name="message" rows="4" placeholder="Let us know if you have dietary preferences or seating requests."></textarea>
                 </div>
               </div>
               <div class="text-center mt-4">
