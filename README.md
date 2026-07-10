@@ -13,6 +13,9 @@ Foodie is a responsive restaurant website built with HTML5, CSS3, Bootstrap 5, a
 - Smooth scrolling and mobile menu behavior
 - Dynamic current year in footer
 - Modern responsive design with Bootstrap utilities
+- Polished hero sections and animated section reveals
+- Enhanced hover effects, card transitions, and modern UI details
+- Newly redesigned contact page with a richer layout and visit planning section
 
 ## Technologies Used
 - HTML5
