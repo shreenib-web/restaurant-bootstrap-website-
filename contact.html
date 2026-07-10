@@ -33,34 +33,50 @@
     </nav>
   </header>
 
-  <section class="contact-hero py-5 text-center text-white" style="background-image: url('images/Restaurant interior.jpg');">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Get in Touch</h1>
-      <p class="lead text-light">We'd love to hear from you. Reach out with questions, feedback, or booking requests.</p>
+  <section class="contact-hero py-5 text-white" style="background-image: url('images/Restaurant interior.jpg');">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8 reveal">
+          <span class="badge bg-warning text-dark rounded-pill mb-3">Visit Us</span>
+          <h1 class="display-5 fw-bold mb-3">We’d love to hear from you</h1>
+          <p class="lead text-light">Whether you are planning a dinner date, a casual lunch, or a special celebration, our team is here to help.</p>
+        </div>
+        <div class="col-lg-4 reveal">
+          <div class="contact-quick-card p-4 rounded-4">
+            <h5 class="fw-bold mb-3">Open Daily</h5>
+            <p class="mb-2"><i class="bi bi-clock-history me-2 text-warning"></i>Mon - Sun: 10 AM - 11 PM</p>
+            <p class="mb-2"><i class="bi bi-telephone me-2 text-warning"></i>(123) 456-7890</p>
+            <p class="mb-0"><i class="bi bi-geo-alt me-2 text-warning"></i>123 Flavor Street, City</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="container py-5">
     <div class="row g-4">
-      <div class="col-lg-5">
-        <div class="p-4 rounded-4 shadow-sm bg-white h-100">
+      <div class="col-lg-5 reveal">
+        <div class="contact-info-card p-4 rounded-4 shadow-sm bg-white h-100">
           <img src="images/Restaurant interior.jpg" alt="Restaurant interior" class="rounded-4 w-100 mb-4 shadow-sm" />
           <h2 class="fw-bold mb-4">Contact Details</h2>
-          <p><i class="bi bi-geo-alt-fill text-warning me-2"></i>123 Flavor Street, City, Country</p>
-          <p><i class="bi bi-telephone-fill text-warning me-2"></i>(123) 456-7890</p>
-          <p><i class="bi bi-envelope-fill text-warning me-2"></i>hello@foodie.com</p>
-          <p class="mb-4"><i class="bi bi-clock-fill text-warning me-2"></i>Mon - Fri: 10am - 10pm | Sat - Sun: 9am - 11pm</p>
-          <div class="d-flex gap-3">
+          <div class="d-flex flex-column gap-3">
+            <p class="mb-0"><i class="bi bi-geo-alt-fill text-warning me-2"></i>123 Flavor Street, City, Country</p>
+            <p class="mb-0"><i class="bi bi-telephone-fill text-warning me-2"></i>(123) 456-7890</p>
+            <p class="mb-0"><i class="bi bi-envelope-fill text-warning me-2"></i>hello@foodie.com</p>
+            <p class="mb-0"><i class="bi bi-clock-fill text-warning me-2"></i>Mon - Fri: 10am - 10pm | Sat - Sun: 9am - 11pm</p>
+          </div>
+          <div class="d-flex gap-3 mt-4">
             <a href="#" class="text-dark fs-4"><i class="bi bi-facebook"></i></a>
             <a href="#" class="text-dark fs-4"><i class="bi bi-instagram"></i></a>
             <a href="#" class="text-dark fs-4"><i class="bi bi-twitter"></i></a>
           </div>
         </div>
       </div>
-      <div class="col-lg-7">
-        <div class="card shadow-sm border-0 p-4">
+      <div class="col-lg-7 reveal">
+        <div class="card shadow-sm border-0 p-4 contact-form-card">
           <div class="card-body">
-            <h2 class="fw-bold mb-4">Send Us a Message</h2>
+            <h2 class="fw-bold mb-2">Send Us a Message</h2>
+            <p class="text-muted mb-4">Let us know your preferences and we’ll get back to you soon.</p>
             <form id="contactForm" novalidate>
               <div class="mb-3">
                 <label for="contactName" class="form-label">Name</label>
@@ -85,11 +101,29 @@
     </div>
   </section>
 
-  <section class="map-placeholder py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-3">Find Us Here</h2>
-      <div class="map-box rounded-4 shadow-sm p-5 bg-white">
-        <p class="mb-0 text-muted">Google Map placeholder. Embed your map iframe here when ready.</p>
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6 reveal">
+          <div class="map-card rounded-4 shadow-sm p-4 h-100 bg-white">
+            <h2 class="fw-bold mb-3">Find Us Here</h2>
+            <p class="text-muted mb-4">A short walk from the city center, making it easy to visit for lunch, dinner, or a special night out.</p>
+            <div class="map-box rounded-4 p-5 text-center">
+              <i class="bi bi-geo-alt-fill fs-1 text-warning mb-3"></i>
+              <p class="mb-0 text-muted">Map embed placeholder. Add your live location here when ready.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="p-4 rounded-4 bg-white shadow-sm">
+            <h3 class="fw-bold mb-3">Plan Your Visit</h3>
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Private dining available for celebrations</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Outdoor seating for relaxed evenings</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Group bookings and catering requests welcome</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
