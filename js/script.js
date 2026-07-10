@@ -16,6 +16,32 @@ internalLinks.forEach(link => {
   });
 });
 
+// Reveal sections on scroll
+const revealElements = document.querySelectorAll('.reveal, .food-card');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+revealElements.forEach(element => revealObserver.observe(element));
+
+// Animate skill bars when visible
+const skillBars = document.querySelectorAll('.skill-meter span');
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.dataset.width;
+      skillObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+skillBars.forEach(bar => skillObserver.observe(bar));
+
 // Reservation form validation and success alert
 const reservationForm = document.getElementById('reservationForm');
 const reservationAlert = document.getElementById('reservationAlert');
