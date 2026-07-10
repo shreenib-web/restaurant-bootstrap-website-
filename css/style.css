@@ -79,11 +79,13 @@ header {
 .about-hero,
 .reservation-hero,
 .contact-hero {
-  min-height: 78vh;
+  min-height: 70vh;
   background-size: cover;
   background-position: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .hero-section::before,
@@ -276,7 +278,13 @@ h2 {
   transition: width 1.1s ease;
 }
 
-/* Contact page */
+/* Reservation and contact page */
+.reservation-banner-card {
+  background: rgba(255, 255, 255, 0.92);
+  color: #1f2937;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.14);
+}
+
 .contact-hero {
   background-size: cover;
   background-position: center;
@@ -363,7 +371,7 @@ footer {
   .about-hero,
   .reservation-hero,
   .contact-hero {
-    min-height: 62vh;
+    min-height: 60vh;
   }
 
   .navbar-nav {
@@ -372,8 +380,12 @@ footer {
 }
 
 @media (max-width: 767px) {
-  .hero-section {
-    min-height: 60vh;
+  .hero-section,
+  .menu-hero,
+  .about-hero,
+  .reservation-hero,
+  .contact-hero {
+    min-height: 52vh;
     text-align: center;
   }
 
