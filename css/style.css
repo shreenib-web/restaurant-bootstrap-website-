@@ -246,6 +246,16 @@ h2 {
   letter-spacing: -0.02em;
 }
 
+.filter-btn.active {
+  background-color: var(--accent) !important;
+  color: #111827 !important;
+  border-color: var(--accent) !important;
+}
+
+.menu-item.is-hidden {
+  display: none;
+}
+
 .accordion-button {
   font-weight: 600;
   color: #1f2937;

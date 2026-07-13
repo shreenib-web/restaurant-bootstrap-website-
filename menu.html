@@ -38,18 +38,28 @@
   <section class="menu-hero py-5 text-white text-center" style="background-image: url('images/hero-bg.jpg');">
     <div class="container">
       <h1 class="display-5 fw-bold">Our Menu</h1>
-      <p class="lead text-light">Browse our handcrafted dishes across pizzas, burgers, pasta, desserts and refreshing drinks.</p>
+      <p class="lead text-light">Browse our handcrafted dishes across pizzas, burgers, <br>pasta, desserts and refreshing drinks.</p>
     </div>
   </section>
 
   <section class="container py-5">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Menu Categories</h2>
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">Filter by Category</h2>
       <p class="text-muted mx-auto" style="max-width: 640px;">From savory starters to sweet endings, every plate is made to impress.</p>
     </div>
 
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" role="group" aria-label="Filter menu by category">
+      <button type="button" class="filter-btn btn btn-sm btn-warning active" data-filter="all">All</button>
+      <button type="button" class="filter-btn btn btn-sm btn-outline-warning" data-filter="pizza">Pizza</button>
+      <button type="button" class="filter-btn btn btn-sm btn-outline-warning" data-filter="burgers">Burgers</button>
+      <button type="button" class="filter-btn btn btn-sm btn-outline-warning" data-filter="pasta">Pasta</button>
+      <button type="button" class="filter-btn btn btn-sm btn-outline-warning" data-filter="desserts">Desserts</button>
+      <button type="button" class="filter-btn btn btn-sm btn-outline-warning" data-filter="drinks">Drinks</button>
+      <button type="button" class="filter-btn btn btn-sm btn-outline-warning" data-filter="special">Special</button>
+    </div>
+
     <div class="row g-4">
-      <div class="col-sm-6 col-lg-4">
+      <div class="col-sm-6 col-lg-4 menu-item" data-category="pizza">
         <div class="card menu-card h-100 shadow-sm border-0">
           <img src="images/Margherita Pizza.jpg" class="card-img-top" alt="Margherita Pizza" />
           <div class="card-body">
@@ -66,7 +76,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4">
+      <div class="col-sm-6 col-lg-4 menu-item" data-category="burgers">
         <div class="card menu-card h-100 shadow-sm border-0">
           <img src="images/Classic Burger.jpg" class="card-img-top" alt="Classic Burger" />
           <div class="card-body">
@@ -83,7 +93,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4">
+      <div class="col-sm-6 col-lg-4 menu-item" data-category="pasta">
         <div class="card menu-card h-100 shadow-sm border-0">
           <img src="images/Creamy Alfredo.jpg" class="card-img-top" alt="Creamy Alfredo" />
           <div class="card-body">
@@ -100,7 +110,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4">
+      <div class="col-sm-6 col-lg-4 menu-item" data-category="desserts">
         <div class="card menu-card h-100 shadow-sm border-0">
           <img src="images/Berry Cheesecake.jpg" class="card-img-top" alt="Berry Cheesecake" />
           <div class="card-body">
@@ -117,7 +127,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4">
+      <div class="col-sm-6 col-lg-4 menu-item" data-category="drinks">
         <div class="card menu-card h-100 shadow-sm border-0">
           <img src="images/Sparkling Lemonade.jpg" class="card-img-top" alt="Sparkling Lemonade" />
           <div class="card-body">
@@ -134,7 +144,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4">
+      <div class="col-sm-6 col-lg-4 menu-item" data-category="special">
         <div class="card menu-card h-100 shadow-sm border-0">
           <img src="images/Chef Special Salad.jpg" class="card-img-top" alt="Chef Special Salad" />
           <div class="card-body">

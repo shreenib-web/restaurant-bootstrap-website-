@@ -141,3 +141,23 @@ navLinks.forEach(link => {
     }
   });
 });
+
+// Menu category filters
+const filterButtons = document.querySelectorAll('.filter-btn');
+const menuItems = document.querySelectorAll('.menu-item');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach(btn => btn.classList.remove('active', 'btn-warning'));
+    filterButtons.forEach(btn => btn.classList.add('btn-outline-warning'));
+    button.classList.add('active', 'btn-warning');
+    button.classList.remove('btn-outline-warning');
+
+    const selectedFilter = button.dataset.filter || 'all';
+
+    menuItems.forEach(item => {
+      const matches = selectedFilter === 'all' || item.dataset.category === selectedFilter;
+      item.classList.toggle('is-hidden', !matches);
+    });
+  });
+});
