@@ -50,11 +50,13 @@ const urlParams = new URLSearchParams(window.location.search);
 const formStatus = urlParams.get('status');
 const formMessage = urlParams.get('message');
 
-if (statusMessage) {
+if (statusMessage && (formStatus || formMessage)) {
   statusMessage.classList.remove('d-none');
   statusMessage.classList.remove('alert-success', 'alert-danger');
   statusMessage.classList.add(formStatus === 'error' ? 'alert-danger' : 'alert-success');
   statusMessage.textContent = formMessage ? decodeURIComponent(formMessage).replace(/\+/g, ' ') : 'Thank you. We will be in touch shortly.';
+} else if (statusMessage) {
+  statusMessage.classList.add('d-none');
 }
 
 const setSubmittingState = (form) => {

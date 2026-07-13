@@ -246,6 +246,21 @@ h2 {
   letter-spacing: -0.02em;
 }
 
+.accordion-button {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #fff8e7;
+  color: #9a6200;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 /* Reveal animations */
 .reveal {
   opacity: 0;

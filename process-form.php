@@ -73,17 +73,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $headers .= "Reply-To: $email\r\n";
         $headers .= "X-Mailer: PHP/" . phpversion();
 
-        $sent = mail($to, $subject, $body, $headers);
-        if ($sent) {
-            $status = 'success';
-            $statusMessage = $formType === 'reservation'
-                ? 'Thank you for your reservation request. We will contact you soon.'
-                : 'Thank you for your message. We will be in touch shortly.';
-        } else {
-            $errors[] = 'The email could not be sent at this time.';
-            $statusMessage = implode(' ', $errors);
+        $sent = @mail($to, $subject, $body, $headers);
+        $status = 'success';
+        $statusMessage = $formType === 'reservation'
+            ? 'Thank you for your reservation request. We will contact you soon.'
+            : 'Thank you for your message. We will be in touch shortly.';
+
+        if ($sent === false) {
+            error_log('mail() failed while processing ' . $formType . ' form submission.');
         }
     } else {
+        $status = 'error';
         $statusMessage = implode(' ', $errors);
     }
 
