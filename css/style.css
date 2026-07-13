@@ -28,8 +28,22 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(244, 180, 0, 0.35);
+  outline-offset: 3px;
+}
+
 .btn-outline-warning {
   border-width: 2px;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.8;
 }
 
 header {

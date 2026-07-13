@@ -44,10 +44,31 @@ skillBars.forEach(bar => skillObserver.observe(bar));
 
 // Reservation form validation and submit
 const reservationForm = document.getElementById('reservationForm');
-const reservationAlert = document.getElementById('reservationAlert');
+const contactForm = document.getElementById('contactForm');
+const statusMessage = document.getElementById('formSuccessMessage');
+const urlParams = new URLSearchParams(window.location.search);
+const formStatus = urlParams.get('status');
+const formMessage = urlParams.get('message');
+
+if (statusMessage) {
+  statusMessage.classList.remove('d-none');
+  statusMessage.classList.remove('alert-success', 'alert-danger');
+  statusMessage.classList.add(formStatus === 'error' ? 'alert-danger' : 'alert-success');
+  statusMessage.textContent = formMessage ? decodeURIComponent(formMessage).replace(/\+/g, ' ') : 'Thank you. We will be in touch shortly.';
+}
+
+const setSubmittingState = (form) => {
+  const button = form.querySelector('button[type="submit"]');
+  if (!button) return;
+
+  button.disabled = true;
+  button.dataset.originalText = button.textContent;
+  button.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...';
+};
+
 if (reservationForm) {
   reservationForm.addEventListener('submit', event => {
-    const inputs = reservationForm.querySelectorAll('input, select');
+    const inputs = reservationForm.querySelectorAll('input, select, textarea');
     let valid = true;
 
     inputs.forEach(input => {
@@ -61,12 +82,14 @@ if (reservationForm) {
 
     if (!valid) {
       event.preventDefault();
+      return;
     }
+
+    setSubmittingState(reservationForm);
   });
 }
 
 // Contact form validation
-const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', event => {
     const inputs = contactForm.querySelectorAll('input, textarea');
@@ -83,15 +106,11 @@ if (contactForm) {
 
     if (!valid) {
       event.preventDefault();
+      return;
     }
-  });
-}
 
-// Show success message after form submission redirect
-const successMessage = document.getElementById('formSuccessMessage');
-const urlParams = new URLSearchParams(window.location.search);
-if (successMessage && urlParams.get('success') === '1') {
-  successMessage.classList.remove('d-none');
+    setSubmittingState(contactForm);
+  });
 }
 
 // Food card interactions
@@ -114,7 +133,7 @@ const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 const navbarCollapse = document.querySelector('.navbar-collapse');
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
-    if (navbarCollapse.classList.contains('show')) {
+    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
       const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
       bsCollapse.hide();
     }
