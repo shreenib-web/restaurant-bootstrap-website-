@@ -93,7 +93,8 @@ header {
 .about-hero,
 .reservation-hero,
 .contact-hero {
-  min-height: 70vh;
+  min-height: clamp(72vh, 84vh, 90vh);
+  padding: 4rem 0;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -132,6 +133,7 @@ header {
 .contact-hero .container {
   position: relative;
   z-index: 1;
+  max-width: 900px;
 }
 
 .hero-section h1,
@@ -152,14 +154,25 @@ header {
 
 .hero-section h1 {
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  font-size: clamp(2.2rem, 4.3vw, 4.3rem);
+  font-size: clamp(2.3rem, 4.3vw, 4.5rem);
   line-height: 1.08;
 }
 
 .hero-section .lead {
   color: rgba(255, 255, 255, 0.92);
-  max-width: 680px;
-  font-size: 1.06rem;
+  max-width: 760px;
+  font-size: clamp(1rem, 1.7vw, 1.15rem);
+}
+
+@media (max-width: 767.5px) {
+  .hero-section {
+    min-height: 75vh;
+    padding: 3rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
 }
 
 .hero-section .btn-outline-light {
