@@ -202,6 +202,44 @@ header {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.form-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.form-control,
+.form-select,
+.form-control:focus,
+.form-select:focus {
+  font-size: 0.98rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 0.9rem;
+  border-color: #e5e7eb;
+  box-shadow: none;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #9ca3af;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(244, 180, 0, 0.15);
+}
+
+textarea.form-control {
+  min-height: 120px;
+}
+
+.invalid-feedback {
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
 .food-card:hover,
 .menu-card:hover,
 .card:hover {
@@ -234,6 +272,36 @@ header {
 .about-preview img {
   min-height: 320px;
   object-fit: cover;
+}
+
+.about-story-section .about-story-image.reveal.is-visible {
+  animation: storySlideInLeft 0.8s ease both;
+}
+
+.about-story-section .about-story-content.reveal.is-visible {
+  animation: storySlideInRight 0.8s ease both;
+}
+
+@keyframes storySlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes storySlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .special-offers {
