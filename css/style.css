@@ -554,3 +554,58 @@ footer {
     font-size: 1rem;
   }
 }
+
+
+
+/* FAQ */
+
+.faq-section{
+    background:#fffaf4;
+}
+
+.custom-faq .accordion-item{
+    border:none;
+    margin-bottom:18px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.custom-faq .accordion-button{
+    background:#fff;
+    font-size:18px;
+    font-weight:600;
+    padding:22px 25px;
+    color:#222;
+    box-shadow:none;
+    transition:.3s;
+}
+
+.custom-faq .accordion-button:not(.collapsed){
+    background:#ffc107;
+    color:#222;
+}
+
+.custom-faq .accordion-button:hover{
+    background:#fff4d3;
+}
+
+.custom-faq .accordion-body{
+    background:#fff;
+    padding:20px 25px;
+    color:#666;
+    line-height:1.8;
+}
+
+.custom-faq .accordion-button::after{
+    transition:.3s;
+}
+
+.custom-faq .accordion-button i{
+    font-size:22px;
+    color:#ff9800;
+}
+
+.custom-faq .accordion-button:not(.collapsed) i{
+    color:#222;
+}
